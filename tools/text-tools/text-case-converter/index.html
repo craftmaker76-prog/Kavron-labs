@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text Case Converter - Kavron Labs</title>
+<meta name="description" content="Convert text to UPPER, lower, Title, Sentence, camelCase, snake_case or kebab-case.">
+<link rel="stylesheet" href="../../../shared/css/global.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../../cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root="../../../"></header>
+<main>
+<nav class="small"><a href="../../../index.html">Home</a> &rsaquo; Text Case Converter</nav>
+<h1>Text Case Converter</h1>
+<p>Convert text to UPPER, lower, Title, Sentence, camelCase, snake_case or kebab-case.</p>
+<div class="toolbox"><label>Your text <textarea id="ccInput" placeholder="Type or paste your text here..."></textarea></label>
+<div class="row"><button type="button" data-case="upper">UPPERCASE</button><button type="button" data-case="lower">lowercase</button><button type="button" data-case="title">Title Case</button><button type="button" data-case="sentence">Sentence case</button><button type="button" data-case="camel">camelCase</button><button type="button" data-case="snake">snake_case</button><button type="button" data-case="kebab">kebab-case</button></div>
+<label>Result <textarea id="ccOutput" readonly></textarea></label>
+<div><button type="button" id="ccCopy" class="secondary">Copy result</button> <button type="button" id="ccClear" class="secondary">Clear</button></div></div>
+<p class="small">This tool runs in your browser. Your files are not uploaded to a server by this static site.</p>
+</main>
+<footer class="site" data-root="../../../"></footer>
+<script src="../../../shared/js/common.js"></script>
+<script src="../../../shared/js/tool-registry.js"></script>
+<script src="../../../cookies/cookie-consent.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

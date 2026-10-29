@@ -1,0 +1,10 @@
+.admin-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.stat{font-size:32px;font-weight:800;margin:0}
+.tool-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:12px 0;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.folder{font-family:monospace;font-size:13px;background:#eef2ff;color:#4f46e5;padding:3px 8px;border-radius:6px;word-break:break-all}
+.tool-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tool-actions button,.tool-actions .btn{margin:0}
+.edit-form label{margin:10px 0 4px}
+.deleted-row{background:#fef2f2;border-color:#fecaca}
+#adminDeletedList{margin-top:28px}
+#adminDeletedList h2{font-size:20px;margin-bottom:8px}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Compressor - Kavron Labs</title>
+<meta name="description" content="Compress an image in your browser with a quality slider and see the size saved.">
+<link rel="stylesheet" href="../../../shared/css/global.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../../cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root="../../../"></header>
+<main>
+<nav class="small"><a href="../../../index.html">Home</a> &rsaquo; Image Compressor</nav>
+<h1>Image Compressor</h1>
+<p>Compress an image in your browser with a quality slider and see the size saved.</p>
+<div class="toolbox"><div class="filebox"><label>Choose an image <input id="cFile" type="file" accept="image/*"></label></div>
+<p class="small" id="cInfo">No image selected yet.</p>
+<label>Quality: <span id="qVal">80</span>% <input id="quality" type="range" min="10" max="100" value="80"></label>
+<label>Output format <select id="cFormat"><option value="image/jpeg">JPG (best for photos)</option><option value="image/webp">WebP (smallest, modern browsers)</option><option value="image/png">PNG (lossless - quality slider has no effect)</option></select></label>
+<div><button type="button" id="compressBtn">Compress and download</button></div>
+<div class="result" id="cResult">Result will appear here.</div>
+<p class="error" id="cErr"></p><img id="cPreview" class="preview" hidden alt="Compressed preview"></div>
+<p class="small">This tool runs in your browser. Your files are not uploaded to a server by this static site.</p>
+</main>
+<footer class="site" data-root="../../../"></footer>
+<script src="../../../shared/js/common.js"></script>
+<script src="../../../shared/js/tool-registry.js"></script>
+<script src="../../../cookies/cookie-consent.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

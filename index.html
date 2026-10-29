@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kavron Labs - Powerful Tools. One Simple Platform.</title>
+<meta name="description" content="Kavron Labs: working picture, PDF and text tools in one simple, fast, mobile-friendly platform. No fake results.">
+<link rel="stylesheet" href="shared/css/global.css">
+<link rel="stylesheet" href="cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root=""></header>
+<main>
+<section class="hero">
+<h1 id="heroTitle">Kavron Labs</h1>
+<p id="heroTagline">Powerful Tools. One Simple Platform. Fast, mobile-friendly, and honest - every tool does exactly what it says.</p>
+</section>
+<h2 id="tools">All Tools</h2>
+<p class="small" id="toolCount"></p>
+<div class="grid" id="toolGrid" data-root=""></div>
+<section class="toolbox">
+<h2>How it works</h2>
+<ol>
+<li>Pick a tool below.</li>
+<li>Use it in your browser - most tools never upload your files anywhere.</li>
+<li>Download the real result.</li>
+</ol>
+<p class="small">PDF tools use the pdf-lib library from a CDN, loaded only on PDF tool pages, so the homepage stays light. If you are offline, PDF tools will show a clear message instead of a fake result.</p>
+</section>
+<section class="toolbox">
+<h2>For the site owner</h2>
+<p>Open the <a href="admin/index.html">Admin Panel</a> to hide or show tools, add a new tool, view settings, and view the admin action log. To add a tool permanently, create its folder under <code>tools/</code> in VS Code, then add it in Admin &gt; Tools - see <code>docs/adding-new-tools.md</code>.</p>
+</section>
+</main>
+<footer class="site" data-root=""></footer>
+<script src="shared/js/common.js"></script>
+<script src="shared/js/tool-registry.js"></script>
+<script src="cookies/cookie-consent.js"></script>
+<script>kavronRenderToolCards('toolGrid');</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Kavron Labs - design v2. Clean, light, mobile-first. No framework, no external fonts, no large images. */
+:root{
+  --bg:#f6f7fb; --card:#ffffff; --text:#111827; --muted:#6b7280;
+  --brand:#4f46e5; --brand-dark:#4338ca; --brand-soft:#eef2ff;
+  --border:#e5e7eb; --green:#15803d; --red:#b91c1c; --shadow:0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.04);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--brand)}
+/* ---------- Header: one clean row, only 3 links ---------- */
+header.site{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.nav{max-width:1100px;margin:0 auto;padding:0 16px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:800;font-size:21px;letter-spacing:-.02em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:9px;white-space:nowrap}
+.brand::before{content:"";width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),#7c3aed);display:inline-block;flex:none}
+.navlinks{display:flex;gap:8px;align-items:center}
+.navlinks a{text-decoration:none;color:#374151;font-weight:600;font-size:15px;padding:8px 12px;border-radius:9px}
+.navlinks a:hover{background:var(--brand-soft);color:var(--brand)}
+.menubtn{display:none;background:#fff;border:1px solid var(--border);border-radius:9px;padding:8px 12px;cursor:pointer;font-weight:600}
+/* ---------- Main, hero, cards ---------- */
+main{max-width:1100px;margin:0 auto;padding:28px 16px 64px}
+.hero{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border-radius:20px;padding:44px 32px;box-shadow:var(--shadow)}
+.hero h1{margin:0 0 10px;font-size:38px;line-height:1.15;letter-spacing:-.02em}
+.hero p{margin:0;font-size:17px;opacity:.95;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-decoration:none;color:var(--text);display:block;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08);border-color:#c7d2fe}
+.card h3{margin:10px 0 6px;font-size:18px}
+.card p{color:var(--muted);margin:0;font-size:15px}
+.badge{display:inline-block;background:var(--brand-soft);color:var(--brand);font-size:12px;font-weight:700;letter-spacing:.02em;padding:3px 9px;border-radius:20px}
+/* ---------- Tool pages: centred, narrow, no cut-off form ---------- */
+main>nav.small, main>h1, main>h1+p{max-width:780px;margin-left:auto;margin-right:auto}
+main>h1{font-size:30px;letter-spacing:-.02em;margin-bottom:6px}
+main>h1+p{color:var(--muted);margin-top:0}
+.toolbox{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;margin:20px auto 0;max-width:780px;box-shadow:var(--shadow)}
+.toolbox button{margin:5px 6px 5px 0}
+label{display:block;font-weight:600;margin:14px 0 6px;font-size:15px}
+input[type=text],input[type=number],input[type=search],select,textarea{width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;font:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(79,70,229,.15)}
+textarea{min-height:160px;resize:vertical}
+button,.btn{display:inline-block;background:var(--brand);color:#fff;border:0;padding:12px 20px;border-radius:10px;cursor:pointer;font-weight:700;font-size:15px;text-decoration:none;line-height:1.4}
+button:hover,.btn:hover{background:var(--brand-dark)}
+button.secondary,.btn.secondary{background:#fff;color:var(--text);border:1px solid var(--border)}
+button.secondary:hover,.btn.secondary:hover{background:#f9fafb}
+button.danger{background:var(--red)}button.success{background:var(--green)}
+.result{background:#f1f5f9;border-radius:10px;padding:14px;white-space:pre-wrap;word-break:break-word;margin-top:16px;font-size:15px}
+.error{color:var(--red);font-weight:600}.small{color:var(--muted);font-size:14px}
+.filebox{border:2px dashed #cbd5e1;border-radius:12px;padding:20px;text-align:center;background:#f8fafc}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>div{flex:1;min-width:160px}
+/* Image preview: NEVER full-screen. Centred, capped height, contained. */
+img.preview{max-width:100%;max-height:420px;width:auto;height:auto;object-fit:contain;display:block;margin:16px auto;background:#f1f5f9;padding:8px;border:1px solid var(--border);border-radius:12px}
+/* ---------- Footer: clear sections, not one crowded line ---------- */
+footer.site{background:#111827;color:#d1d5db;margin-top:0}
+.footer-inner{max-width:1100px;margin:0 auto;padding:36px 16px 20px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+.footer-inner h3{color:#fff;margin:0 0 12px;font-size:16px}
+.footer-inner p{margin:0;color:#9ca3af;font-size:15px}
+.footer-inner a{display:block;color:#d1d5db;text-decoration:none;padding:4px 0;font-size:15px}
+.footer-inner a:hover{color:#fff}
+.footer-bottom{max-width:1100px;margin:0 auto;padding:16px;border-top:1px solid #374151;text-align:center;color:#9ca3af;font-size:14px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--border);vertical-align:top}
+@media(max-width:800px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero{padding:32px 20px}.hero h1{font-size:30px}
+  .navlinks{display:none}
+  .navlinks.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:64px;left:0;right:0;background:#fff;padding:12px 16px;border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+  .navlinks.open a{padding:12px}
+  .menubtn{display:block}
+  .footer-inner{grid-template-columns:1fr}
+  table{font-size:14px}
+}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+  .hero h1{font-size:27px}
+  .toolbox{padding:18px 16px}
+  button,.btn{width:100%;text-align:center}
+  .toolbox button{margin:5px 0}
+  img.preview{max-height:320px}
+}

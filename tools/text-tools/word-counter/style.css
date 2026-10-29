@@ -1,0 +1,5 @@
+/* Tool page styles - extends shared/css/global.css.
+   Image previews are capped here as well, so an uploaded image can never
+   take over the whole page: max height 420px on desktop, 320px on mobile. */
+img.preview{max-width:100%;max-height:420px;width:auto;height:auto;object-fit:contain;display:block;margin:16px auto;background:#f1f5f9;padding:8px;border:1px solid #e5e7eb;border-radius:12px}
+@media(max-width:520px){ img.preview{max-height:320px} }

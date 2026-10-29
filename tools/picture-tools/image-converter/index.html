@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Converter - Kavron Labs</title>
+<meta name="description" content="Convert an image between PNG, JPG and WebP in your browser. No upload.">
+<link rel="stylesheet" href="../../../shared/css/global.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../../cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root="../../../"></header>
+<main>
+<nav class="small"><a href="../../../index.html">Home</a> &rsaquo; Image Converter</nav>
+<h1>Image Converter</h1>
+<p>Convert an image between PNG, JPG and WebP in your browser. No upload.</p>
+<div class="toolbox"><div class="filebox"><label>Choose an image <input id="vFile" type="file" accept="image/*"></label></div>
+<p class="small" id="vInfo">No image selected yet.</p>
+<label>Convert to <select id="vFormat"><option value="image/png">PNG</option><option value="image/jpeg">JPG</option><option value="image/webp">WebP</option></select></label>
+<div><button type="button" id="convertBtn">Convert and download</button></div>
+<p class="error" id="vErr"></p><img id="vPreview" class="preview" hidden alt="Converted preview"></div>
+<p class="small">This tool runs in your browser. Your files are not uploaded to a server by this static site.</p>
+</main>
+<footer class="site" data-root="../../../"></footer>
+<script src="../../../shared/js/common.js"></script>
+<script src="../../../shared/js/tool-registry.js"></script>
+<script src="../../../cookies/cookie-consent.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

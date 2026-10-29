@@ -1,0 +1,76 @@
+{
+  "site": "Kavron Labs",
+  "version": "1.0",
+  "tools": [
+    {
+      "id": "image-resizer",
+      "name": "Image Resizer",
+      "category": "picture-tools",
+      "categoryLabel": "Picture Tools",
+      "folder": "tools/picture-tools/image-resizer",
+      "page": "tools/picture-tools/image-resizer/index.html",
+      "description": "Resize an image in your browser, keep the aspect ratio, and download it.",
+      "enabled": true
+    },
+    {
+      "id": "image-compressor",
+      "name": "Image Compressor",
+      "category": "picture-tools",
+      "categoryLabel": "Picture Tools",
+      "folder": "tools/picture-tools/image-compressor",
+      "page": "tools/picture-tools/image-compressor/index.html",
+      "description": "Compress an image in your browser with a quality slider and see the size saved.",
+      "enabled": true
+    },
+    {
+      "id": "image-converter",
+      "name": "Image Converter",
+      "category": "picture-tools",
+      "categoryLabel": "Picture Tools",
+      "folder": "tools/picture-tools/image-converter",
+      "page": "tools/picture-tools/image-converter/index.html",
+      "description": "Convert an image between PNG, JPG and WebP in your browser. No upload.",
+      "enabled": true
+    },
+    {
+      "id": "pdf-merger",
+      "name": "PDF Merger",
+      "category": "pdf-tools",
+      "categoryLabel": "PDF Tools",
+      "folder": "tools/pdf-tools/pdf-merger",
+      "page": "tools/pdf-tools/pdf-merger/index.html",
+      "description": "Merge multiple PDF files into one PDF, in the order you choose.",
+      "enabled": true
+    },
+    {
+      "id": "pdf-splitter",
+      "name": "PDF Splitter",
+      "category": "pdf-tools",
+      "categoryLabel": "PDF Tools",
+      "folder": "tools/pdf-tools/pdf-splitter",
+      "page": "tools/pdf-tools/pdf-splitter/index.html",
+      "description": "Extract pages from a PDF, or split a PDF into one file per page.",
+      "enabled": true
+    },
+    {
+      "id": "word-counter",
+      "name": "Word Counter",
+      "category": "text-tools",
+      "categoryLabel": "Text Tools",
+      "folder": "tools/text-tools/word-counter",
+      "page": "tools/text-tools/word-counter/index.html",
+      "description": "Count words, characters, sentences, paragraphs and reading time.",
+      "enabled": true
+    },
+    {
+      "id": "text-case-converter",
+      "name": "Text Case Converter",
+      "category": "text-tools",
+      "categoryLabel": "Text Tools",
+      "folder": "tools/text-tools/text-case-converter",
+      "page": "tools/text-tools/text-case-converter/index.html",
+      "description": "Convert text to UPPER, lower, Title, Sentence, camelCase, snake_case or kebab-case.",
+      "enabled": true
+    }
+  ]
+}

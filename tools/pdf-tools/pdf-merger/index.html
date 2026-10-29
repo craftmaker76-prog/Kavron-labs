@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF Merger - Kavron Labs</title>
+<meta name="description" content="Merge multiple PDF files into one PDF, in the order you choose.">
+<link rel="stylesheet" href="../../../shared/css/global.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../../cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root="../../../"></header>
+<main>
+<nav class="small"><a href="../../../index.html">Home</a> &rsaquo; PDF Merger</nav>
+<h1>PDF Merger</h1>
+<p>Merge multiple PDF files into one PDF, in the order you choose.</p>
+<div class="toolbox"><div class="filebox"><label>Choose PDF files (in merge order) <input id="mFiles" type="file" accept="application/pdf" multiple></label></div>
+<div class="result" id="mList">No files selected yet.</div>
+<div><button type="button" id="mergeBtn">Merge and download</button></div>
+<p class="error" id="mErr"></p><p class="small" id="mStatus"></p>
+<p class="small">Note: this tool loads the pdf-lib library from a CDN, only on this page. If you are offline, it will show a clear error instead of a fake result.</p></div>
+<p class="small">This tool runs in your browser. Your files are not uploaded to a server by this static site.</p>
+</main>
+<footer class="site" data-root="../../../"></footer>
+<script src="../../../shared/js/common.js"></script>
+<script src="../../../shared/js/tool-registry.js"></script>
+<script src="../../../cookies/cookie-consent.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

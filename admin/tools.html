@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage Tools - Admin Panel - Kavron Labs</title>
+<meta name="description" content="Manage Tools - Admin Panel on Kavron Labs.">
+<link rel="stylesheet" href="../shared/css/global.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="../cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root="../"></header>
+<main>
+<h1>Manage Tools</h1>
+<p>ADD shows a tool on the site. REMOVE hides it. <strong>EDIT</strong> changes the tool's name and description. <strong>DELETE</strong> removes it from the site in this browser: a tool you added here is removed completely, a built-in tool goes to "Deleted tools" below where you can restore it. DELETE does not delete files from VS Code. To make an EDIT or DELETE permanent for everyone, click Download tools.json below and replace <code>data/tools.json</code> in VS Code.</p>
+<input id="adminSearch" type="search" placeholder="Search tools, e.g. image, pdf, word...">
+<p class="small" id="adminCount"></p>
+<div id="adminToolList"></div>
+<div id="adminDeletedList"></div>
+<div class="toolbox">
+<h2>Add a new tool</h2>
+<p class="small">Step 1: create the tool folder in VS Code first, at <code>tools/&lt;category&gt;/&lt;slug&gt;/</code>, with <code>index.html</code>, <code>style.css</code> and <code>script.js</code>. Step 2: fill in this form. Step 3: click Download tools.json and replace <code>data/tools.json</code> to make it permanent. Full steps: <code>docs/adding-new-tools.md</code>.</p>
+<form id="addToolForm" class="toolbox">
+<label>Tool name <input name="name" required placeholder="Example: QR Code Generator"></label>
+<label>Slug (lowercase, hyphens only) <input name="slug" required placeholder="example: qr-code-generator"></label>
+<label>Category <select name="category"><option value="picture-tools">Picture Tools</option><option value="pdf-tools">PDF Tools</option><option value="text-tools">Text Tools</option><option value="other-tools">Other Tools</option></select></label>
+<label>Description <input name="description" placeholder="One short sentence about what the tool does"></label>
+<button type="submit">Add tool</button>
+<p id="addToolMsg" class="small"></p>
+</form>
+<button type="button" id="downloadJsonBtn" class="secondary">Download tools.json (for permanent save)</button>
+<p class="small">After downloading, replace <code>data/tools.json</code> in VS Code with the downloaded file.</p>
+</div>
+
+</main>
+<footer class="site" data-root="../"></footer>
+<script src="../shared/js/common.js"></script>
+<script src="../shared/js/tool-registry.js"></script>
+<script src="../cookies/cookie-consent.js"></script>
+<script src="js/admin.js"></script><script src="js/tools-manager.js"></script>
+</body>
+</html>

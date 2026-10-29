@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Resizer - Kavron Labs</title>
+<meta name="description" content="Resize an image in your browser, keep the aspect ratio, and download it.">
+<link rel="stylesheet" href="../../../shared/css/global.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../../cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root="../../../"></header>
+<main>
+<nav class="small"><a href="../../../index.html">Home</a> &rsaquo; Image Resizer</nav>
+<h1>Image Resizer</h1>
+<p>Resize an image in your browser, keep the aspect ratio, and download it.</p>
+<div class="toolbox"><div class="filebox"><label>Choose an image <input id="imgFile" type="file" accept="image/*"></label></div>
+<p class="small" id="imgInfo">No image selected yet.</p>
+<div class="row"><div><label>Width (px) <input id="imgW" type="number" min="1"></label></div><div><label>Height (px) <input id="imgH" type="number" min="1"></label></div></div>
+<label><input id="keepRatio" type="checkbox" checked> Keep aspect ratio</label>
+<label>Output format <select id="imgFormat"><option value="image/png">PNG</option><option value="image/jpeg">JPG</option><option value="image/webp">WebP</option></select></label>
+<div><button type="button" id="resizeBtn">Resize and download</button></div>
+<p class="error" id="imgErr"></p><img id="imgPreview" class="preview" hidden alt="Resized preview"></div>
+<p class="small">This tool runs in your browser. Your files are not uploaded to a server by this static site.</p>
+</main>
+<footer class="site" data-root="../../../"></footer>
+<script src="../../../shared/js/common.js"></script>
+<script src="../../../shared/js/tool-registry.js"></script>
+<script src="../../../cookies/cookie-consent.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

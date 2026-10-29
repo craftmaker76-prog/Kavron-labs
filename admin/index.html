@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Panel - Kavron Labs</title>
+<meta name="description" content="Admin Panel on Kavron Labs.">
+<link rel="stylesheet" href="../shared/css/global.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="../cookies/cookie-consent.css">
+</head>
+<body>
+<header class="site" data-root="../"></header>
+<main>
+<h1>Admin Panel</h1>
+<p>Manage Kavron Labs from here. Changes made here apply immediately in this browser. To make them permanent for everyone, download the updated tools.json from the Tools page and replace <code>data/tools.json</code> in VS Code.</p>
+<div class="grid" id="statsGrid"></div>
+<div class="toolbox">
+<h2>Quick links</h2>
+<p><a class="btn" href="tools.html">Manage Tools - Add / Remove</a> <a class="btn secondary" href="settings.html">Settings</a> <a class="btn secondary" href="logs.html">View Logs</a> <a class="btn secondary" href="../index.html">View Site</a></p>
+<p class="small">REMOVE hides a tool from the site. It does not delete any files. ADD shows it again.</p>
+</div>
+
+</main>
+<footer class="site" data-root="../"></footer>
+<script src="../shared/js/common.js"></script>
+<script src="../shared/js/tool-registry.js"></script>
+<script src="../cookies/cookie-consent.js"></script>
+<script src="js/admin.js"></script>
+<script>kavronLoadTools().then(function(tools){
+  var on = tools.filter(function(t){return t.enabled!==false;}).length;
+  var cats = {}; tools.forEach(function(t){ cats[t.categoryLabel]=1; });
+  document.getElementById('statsGrid').innerHTML =
+    '<div class="admin-card"><p class="stat">'+tools.length+'</p><p>Total tools</p></div>'
+    + '<div class="admin-card"><p class="stat">'+on+'</p><p>Visible on site</p></div>'
+    + '<div class="admin-card"><p class="stat">'+(tools.length-on)+'</p><p>Hidden</p></div>'
+    + '<div class="admin-card"><p class="stat">'+Object.keys(cats).length+'</p><p>Categories</p></div>';
+});</script>
+</body>
+</html>
